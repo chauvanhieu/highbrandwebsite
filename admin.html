@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <div class="wrap">
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <p onclick="adminToHome()">Trang chủ</p>
+                </li>
+                <li>
+                    <p onclick="logOut()" href="#">Đăng xuất</p>
+                </li>
+            </ul>
+        </nav>
+        <div class="product">
+            <div class="addItem">
+                <h1>Thêm sản phẩm</h1>
+                <div class="form-group">
+                    <label for="name">Tên sản phẩm:</label>
+                    <input id="name" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="price">Giá:</label>
+                    <input id="price" type="number">
+                </div>
+                <div class="form-group">
+                    <label for="picture">Hình ảnh:</label>
+                    <input id="picture" type="text">
+                </div>
+                <button onclick="createItem()">Thêm vào danh sách</button>
+
+                <div id="edit"></div>
+            </div>
+            <div class="items">
+
+                <table class="">
+                    <thead>
+                        <tr>
+                            <th>ID:</th>
+                            <th>Name:</th>
+                            <th>Picture:</th>
+                            <th>Price:</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody id="domList">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="admin.js"></script>
+
+</html>

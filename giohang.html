@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIỎ HÀNG</title>
+    <link rel="stylesheet" href="giohang.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="./login.html">Admin</a>
+                </li>
+                <li>
+                    <a href="index.html">Trang chủ</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="slide-form">
+            <div class="slide" id="slides" onclick="slide()">
+                <img id="img" src="https://rubicmarketing.com/wp-content/uploads/2021/08/thiet-ke-banner-shop-thoi-trang-2.jpg">
+                <button onclick="prev(index)" id="prev">PREV</button>
+                <button onclick="next(index)" id="next">NEXT</button>
+            </div>
+            <p id="index"></p>
+        </div>
+
+
+        <center>
+            <h1>GIỎ HÀNG</h1>
+        </center>
+        <div class="gioHang">
+            <table class="">
+                <thead>
+                    <tr>
+                        <th class="pic">Hình ảnh:</th>
+                        <th class="ten">Sản phẩm:</th>
+                        <th class="gia">Giá</th>
+                        <th class="op"></th>
+                    </tr>
+                </thead>
+                <tbody id="domList">
+
+                </tbody>
+
+            </table>
+        </div>
+
+
+
+
+        <div name="dangKy" class="formDangKy">
+            <i onclick="document.getElementById('formDangKy').style.display = 'none'" class="fa-regular fa-circle-xmark"></i>
+            <h2>Đăng ký thành viên</h2>
+            <div class="form-group">
+                <label for="name">Họ tên đầy đủ:</label>
+                <input id="name" type="text">
+                <p class="nameMessage"></p>
+            </div>
+            <div class="form-group">
+                <label for="email">Tài khoản email:</label>
+                <input id="email" type="text">
+                <p class="nameMessage"></p>
+            </div>
+            <div class="form-group">
+                <label for="username">Tên đăng nhập:</label>
+                <input id="username" type="text">
+                <p class="nameMessage"></p>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input id="password" type="password">
+                <p class="nameMessage"></p>
+            </div>
+            <div class="form-group">
+                <label for="repass">Nhập lại mật khẩu</label>
+                <input id="repass" type="password">
+                <p class="nameMessage"></p>
+            </div>
+            <button onclick="dangKy()">Đăng ký</button>
+        </div>
+    </div>
+</body>
+<script src="giohang.js"></script>
+
+</html>
