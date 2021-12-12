@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
     var json = localStorage.getItem('admin')
     var admin = JSON.parse(json)
-    if (admin && admin.isAdmin) {
+    if (!params.admin && admin && admin.isAdmin) {
+        localStorage.removeItem('admin')
+    }
+    if (admin && admin.isAdmin && params.admin) {
         DOM()
     } else {
         location.href = './login.html'
